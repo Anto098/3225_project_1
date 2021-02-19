@@ -1,7 +1,11 @@
 #!/bin/bash
 #$1 = dir with all files
 #$2 = output dir
-mkdir $2
+if[ -d $1]; then
+	echo "dir already exists"
+else
+	mkdir $2
+fi
 for file in $1:
 do
 	echo $file

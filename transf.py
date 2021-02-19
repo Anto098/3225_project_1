@@ -6,7 +6,12 @@ from bs4 import BeautifulSoup
 #print(type(th.contents)) #list
 # POUR PRINT DANS LA CONSOLE : python3 ./transf.py < css3-modsel-1.html
 # POUR OUTPUT DANS UN FICHIER : python transf.py < css3-modsel-1.html > css3-modsel-1-MODIFIED.html
-html_file = sys.stdin.read()
+# html_file = sys.stdin.read()
+arg = sys.argv[1]
+with open(sys.argv[1], 'r+') as f:
+    html_file = f.read()
+print("asd")
+print(f)
 soup = BeautifulSoup(html_file, features="html.parser")
 
 for link in soup.find_all("link"):
