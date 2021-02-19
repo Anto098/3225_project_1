@@ -4,6 +4,7 @@
 mkdir $2
 for file in $1:
 do
-	python3 ./transf.py $file > ./$2
+	echo $file
+	python3 ./transf.py $file > ./$2/$file
 done
 
