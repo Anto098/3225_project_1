@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>
+   Groups of selectors
+  </title>
+  <meta content="Daniel Glazman" name="author"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <style type="text/css">
+   li,p { background-color : lime }
+  </style>
+  <link href="css3-modsel-2.html" rel="next" title="Type element selectors"/>
+  <link href="css3-modsel-d4.html" rel="last" title="Dynamic updating of :first-child and :last-child"/>
+  <link href="./index.html" rel="up"/>
+  <link href="../../../index.html" rel="top"/>
+ </head>
+ <body>
+  <table class="testDescription table table-dark">
+   <tr>
+    <th class="b">
+     CSS 3 Module
+    </th>
+    <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a class="btn btn-primary" href="#" role="button">
+      NEXT
+     </a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">
+     W3C Selectors
+    </td>
+    <td class="c" colspan="2">
+     Test #1 of 172
+    </td>
+   </tr>
+   <tr>
+    <th class="b">
+     Testing
+    </th>
+    <th class="a">
+     Date
+    </th>
+    <th class="a">
+     Revision
+    </th>
+   </tr>
+   <tr>
+    <td class="b">
+     Groups of selectors (ID #1)
+    </td>
+    <td class="a">
+     2001-07-11
+    </td>
+    <td class="a">
+     1.0
+    </td>
+   </tr>
+  </table>
+  <div class="testSource d-flex mx-2  row">
+   <div class="testText col border border-dark mx-3">
+    <ul>
+     <li>
+      The background of this list item should be green
+     </li>
+     <li>
+      The background of this second list item should be also green
+     </li>
+    </ul>
+    <p>
+     The background of this paragraph should be green.
+    </p>
+   </div>
+   <pre class="rules col border border-dark mx-3">li,p { background-color : lime }</pre>
+   <pre class="rules col border border-dark mx-3">
+&lt;ul&gt;
+  &lt;li&gt;The background of this list item should be green&lt;/li&gt;
+  &lt;li&gt;The background of this second list item should be also green&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The background of this paragraph should be green.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>
