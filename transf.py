@@ -10,8 +10,6 @@ from bs4 import BeautifulSoup
 arg = sys.argv[1]
 with open(sys.argv[1], 'r+') as f:
     html_file = f.read()
-print("asd")
-print(f)
 soup = BeautifulSoup(html_file, features="html.parser")
 
 for link in soup.find_all("link"):
@@ -52,7 +50,8 @@ for td in soup.find_all("td", {"class" : "c"}):
     td.string = "Test #"+td.string
 
 for table in soup.find_all("table"): # change table style
-    table["class"].append("table table-dark")
+    if table.has_attr("class") and table["class"][0] == "testDescription":
+        table["class"].append("table table-dark")
 
 for div in soup.find_all("div"): #make 3 blocs out of : html, css, html+css
     if div.has_attr("class"):
