@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 #print(type(th.contents[0])) #bs4.element.NavigableString
 #print(type(th.contents)) #list
 # POUR PRINT DANS LA CONSOLE : python3 ./transf.py < css3-modsel-1.html
-# POUR OUTPUT DANS UN FICHIER : python transf.py < css3-modsel-1.html > css3-modsel-1-MODIFIED.html
+# POUR OUTPUT DANS UN FICHIER : python transf.py css3-modsel-1.html > css3-modsel-1-MODIFIED.html
 # html_file = sys.stdin.read()
 arg = sys.argv[1]
 with open(sys.argv[1], 'r+') as f:
