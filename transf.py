@@ -83,7 +83,7 @@ for div in soup.find_all("div"):
             last["class"] = ["col"]
             div.append(last)
 #put titles in div and 2 pre
-    if div["class"][0] == "testText":
+    if div.has_attr("class") and div["class"][0] == "testText":
         resultat = soup.new_tag("h2")
         resultat.string = "RESULT"
         div.insert(0,resultat)
@@ -125,7 +125,7 @@ def scramble_text():
     # SCRAMBLE TEXT
     test_text = []
     for div in soup.find_all("div"):
-        if div["class"][0] == "testText":
+        if div.has_attr("class") and div["class"][0] == "testText":
             scramble(div.children)
             # test_text = str(div)[86:-6]
             for child in div.children:
