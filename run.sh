@@ -7,14 +7,12 @@ then
 else
 	mkdir $2
 fi
-echo "$1"
-for file in "$1"/*
+for full_path in "$1"/*
 do
-  echo "$file"
-#   newfile=$(${file#htmls})
-  fn=$(echo "$file" | cut -d "/" -f2)
-  echo "$fn"
-  python3 ./transf.py $file > ./$2/$fn
+  echo "$full_path"
+  file_name=$(echo "$full_path" | cut -d "/" -f2)
+  echo "$file_name"
+  python3 ./transf.py $full_path ./$2/$file_name
 done
 
 
