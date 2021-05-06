@@ -1,6 +1,5 @@
 import sys
 from random import shuffle
-
 from bs4 import BeautifulSoup
 
 input_full_path = sys.argv[1]
@@ -89,7 +88,6 @@ html = soup.new_tag("h2")
 html.string = "HTML"
 pre[1].insert(0, html)
 
-
 def add_solution_button(fn):
     # ADD SOLUTION BUTTON
     for table in soup.find_all("table"):
@@ -111,7 +109,6 @@ def add_solution_button(fn):
 
         table.append(new_row)
 
-
 def scramble_text():
     # SCRAMBLE TEXT
     test_text = []
@@ -129,11 +126,6 @@ def remove_css():
     for style in soup.find_all("style"):
         style.string=""
 
-
-
-
-
-
 def scramble(children):
     for kid in children:
         if kid.string is not None:
@@ -142,7 +134,6 @@ def scramble(children):
             kid.string = " ".join(words)
         else:
             scramble(kid)
-
 
 def main():
 ################# SOLUTION PAGE ##################
@@ -155,8 +146,6 @@ def main():
     f = open("/".join([output_prefix_path,solution_file_name]), "w")
     f.write(soup.prettify())
 ################# BASE PAGE ######################
-    
-    
     a = soup.find("a", {"href" : file_name})
     a["href"] = solution_file_name
     
